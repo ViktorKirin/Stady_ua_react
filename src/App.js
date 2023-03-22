@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React from "react";
+import LeftSide from './components/left_side/leftSide';
+import RightSide from './components/right_side/inputs/rightSide';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+     return (
+      <div className='container'>
+        <LeftSide></LeftSide>
+        <RightSide></RightSide>
+      </div>
 
-export default App;
+     )
+   }
+
+export default App
