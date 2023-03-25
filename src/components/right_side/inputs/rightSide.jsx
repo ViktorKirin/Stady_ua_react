@@ -68,18 +68,18 @@ function RightSide() {
                     type="text" 
                     id="name" 
                     className={`"name" ${validateName(text) && 'invalid'}`} 
-                    onChange={(e) => setText(e.target.value)}/>
+                    onChange={(e) => setText(e.target.value)}/><br/>
                     
-                    {validateName(text) && (<p style={{color:"red"}}>Error: Name must not contain numbers</p>)}
+                    {validateName(text) && (<p style={{color:"red"}}>Error: Name must not contain numbers</p>)}<br/>
 
                     <label htmlFor="email">Email</label><br />
                     <input 
                     type="email" 
                     id="email" 
                     className={`"email" ${validateEmail(email) && 'invalid'}`} 
-                    onChange={(e) => {setEmail(e.target.value)}} />
+                    onChange={(e) => {setEmail(e.target.value)}} /><br/>
 
-                    {validateEmail(email) && (<p style={{color:"red"}}>Error: Email is invalid</p>)}
+                    {validateEmail(email) && (<p style={{color:"red"}}>Error: Email is invalid</p>)}<br/>
 
 
                     <label htmlFor="Password">Password</label><br />
@@ -92,7 +92,7 @@ function RightSide() {
                     {validatePassword(password) && (<p style={{color:"red"}}>Error: password not shorter than 7 characters</p>)}
 
 
-                <Button className='createAccountBtn' type="submit">Create Account</Button>
+                <Button className='createAccountBtn' type="submit" onSubmit={handleSubmit}>Create Account</Button>
                 <Button className='singBtn' >Sign up with Google</Button>
                 </form>
 
