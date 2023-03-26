@@ -4,7 +4,7 @@ import "./index.css";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-function Card() {
+function Card({categoriesID}) {
     const [dataCard, setCardData] = useState([]);
 
     useEffect(() => {
@@ -17,21 +17,25 @@ function Card() {
         })
     }, [])
 
+
              console.log(dataCard)   
     return (
     <>
         {dataCard.map((el, index) => {
+
+            const aktuelleDate = new Date (el.published_at).toLocaleDateString();
+
             return <div className="Blog" key={index}>
                 <img src={el.image} className="blogImgage"></img>
                 <div className="category">{el.category.title}</div>
-                <div className="dateOfBlog">{el.published_at}</div>
+                <div className="dateOfBlog"> {aktuelleDate}</div>
                 <h2 className="title">{el.title}</h2>
                 <div className="description">{el.description}</div>
                     <div className="personeConteiner">
                         <img src={el.author.avatar} className='avatar'></img>
-                        <div>
-                            <p className="personeName">{el.author.name}</p>
-                            <p className="personePosition">{el.author.position}</p>
+                        <div className="personeName">
+                            <p className="Name">{el.author.name}</p>
+                            <p className="position">{el.author.position}</p>
                         </div>
 
                     </div>
