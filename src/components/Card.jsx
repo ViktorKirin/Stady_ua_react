@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 
 function Card({categoriesID}) {
     const [dataCard, setCardData] = useState([]);
+    const [selectedCategories, setSelectedCategories] = useState([]);
 
     useEffect(() => {
         axios.get(`/articles.json`).then((response) => {            
@@ -16,12 +17,15 @@ function Card({categoriesID}) {
             console.log(err);
         })
     }, [])
-
+    useEffect (() =>{
+        const newСategory= dataCard.filter(categoriesID)
+        setSelectedCategories(newСategory)
+    }, [])
 
              console.log(dataCard)   
     return (
     <>
-        {dataCard.map((el, index) => {
+        {selectedCategories.map((el, index) => {
 
             const aktuelleDate = new Date (el.published_at).toLocaleDateString();
 
