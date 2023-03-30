@@ -1,0 +1,39 @@
+
+
+.itemText {
+
+    width: 756px;
+    height: 64px;
+}
+.itemText:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 40px;
+    width: 756px;
+    height: 42px;
+    padding: 11px 24px;
+}
+form {
+    position: relative;
+}
+.addTaskBtn {
+    /* background: #3056D3; */
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #3056D3 ;
+    position:absolute;
+    right: 130px;
+    top: 20px;
+}
+.itemToDo {
+    width: 756px;
+    height: 64px;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
