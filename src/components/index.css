@@ -1,9 +1,11 @@
-
+* {
+    font-family: 'Inter';
+}
 
 .itemText {
-
-    width: 756px;
-    height: 64px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
 }
 .itemText:hover {
     color: red;
@@ -17,6 +19,7 @@
     width: 756px;
     height: 42px;
     padding: 11px 24px;
+    box-sizing: border-box;
 }
 form {
     position: relative;
@@ -28,12 +31,35 @@ form {
     border-radius: 50%;
     border: 1px solid #3056D3 ;
     position:absolute;
-    right: 130px;
-    top: 20px;
+    right: 48px;
+    top: 10px;
 }
 .itemToDo {
     width: 756px;
     height: 64px;
     background: #FFFFFF;
     border-radius: 6px;
+    position: relative;
+    padding: 20px 27px;
+    display: flex;
+    box-sizing: border-box;
+    gap: 12px;
+    
+}
+.removeTaskBtn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #3056D3 ;
+    position: absolute;
+    right: 26px;
+    top: 20px;
+}
+.taskCheckbox {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    background: #F1F4FF;
+    border: 1px solid #3056D3;
+    border-radius: 4px;
 }

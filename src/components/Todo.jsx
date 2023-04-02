@@ -6,13 +6,14 @@ import { useState, useEffect } from 'react';
 function ToDo({todo, toggleTask, removeTask}) {
    return (<>
    <div key={todo.id} className="itemToDo">
+    <input type="checkbox" id="checkbox" class="taskCheckbox" name="checkbox"/>
         <div 
             className={todo.complete ? "itemText strike" : "itemText"}
             onClick={()=> toggleTask(todo.id)}
         >
             {todo.task}
         </div>
-        <button onClick={() => removeTask(todo.id)}>-</button>
+        <button className="removeTaskBtn" onClick={() => removeTask(todo.id)}>-</button>
     </div>
    </>
 
